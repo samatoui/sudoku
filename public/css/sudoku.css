@@ -1,0 +1,180 @@
+body{background:url('../images/canvas-bg.jpg') 0 0; }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0;
+}
+
+#sudoku-grid-wrapper {
+    float:left;
+    margin-right:30px;
+    margin-bottom:10px;
+    border-top:5px solid #1b7bcc;
+    border-bottom:5px solid #1b7bcc;
+    border-left:5px solid #1b7bcc;
+    border-right:5px solid #1b7bcc;
+    background-color:#1b7bcc;
+    /* IE9 - must specify each corner */
+    border-top-right-radius: 10px; 
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    -moz-border-radius: 10px; /* Firefox */
+    -webkit-border-radius: 10px; /* Safari, Chrome */
+    border-radius: 10px; /* CSS3 */
+}
+
+#sudoku-grid td {
+    text-align:center;
+    vertical-align:middle;
+    line-height:1em;
+}
+
+#sudoku-grid td.gl {
+    border-left:4px solid gray;
+}
+#sudoku-grid td.bl {
+    border-left:3px solid gray;
+}
+#sudoku-grid td.cl {
+    border-left:1px solid gray;
+}
+#sudoku-grid td.gr {
+    border-right:4px solid gray;
+}
+#sudoku-grid td.br {
+    border-right:3px solid gray;
+}
+#sudoku-grid td.cr {
+    border-right:1px solid gray;
+}
+#sudoku-grid td.gt {
+    border-top:4px solid gray;
+}
+#sudoku-grid td.bt {
+    border-top:3px solid gray;
+}
+#sudoku-grid td.ct {
+    border-top:1px solid gray;
+}
+#sudoku-grid td.gb {
+    border-bottom:4px solid gray;
+}
+#sudoku-grid td.bb {
+    border-bottom:3px solid gray;
+}
+#sudoku-grid td.cb {
+    border-bottom:1px solid gray;
+}
+
+#sudoku-grid input {
+    float: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width:34px; height:24px;
+    text-align:center;
+    vertical-align:middle;
+    font-size: 16pt;
+    -webkit-border-radius:0px;
+}
+
+#sudoku-grid input.candidate {
+    border:0px; 
+    padding:0px; 
+    background:transparent;
+    float:left; 
+    -webkit-appearance:caret;
+    height:11px; 
+    width:11px; 
+    font-size:7pt;
+}
+
+.cell {
+    border-style:none;
+    color:black;
+}
+.hintcell {
+    border-style:none;
+    color: #186cb3; /* blue */
+    background-color:#4ebf4e; /* green */
+}
+.hintunitcell {
+    border-style:none;
+    color: #186cb3; /* blue */
+    background-color:rgb(215,215,215); /* gray */
+}
+.inputcell {
+    border-style:none;
+    color: #186cb3; /* blue */
+    background-color:white;
+}
+.errorcell {
+    border-style:none;
+    color: #186cb3; /* blue */
+    background-color:rgb(255,198,226); /* light red */
+}
+.errordigit {
+    border-style:none;
+    color: red;
+    background-color:rgb(255,198,226); /* light red */
+}
+.candidatediv {
+    float: left;
+    border: 1px solid gray;
+    width: 34px;
+    height: 34px;
+    background: #fff;
+}
+.candidatediv td {
+    color:#000;
+}
+
+.candidatediv td input {
+    border:0px; 
+    padding:0px; 
+    background:transparent;
+    float:left; 
+    -webkit-appearance:caret; 
+    height:11px; 
+    width:11px; 
+    font-size:7pt;
+}
+
+@media (min-width:1280px) {
+    #sudoku-grid input {
+        width:44px; height:34px;
+        font-size: 20pt;
+    }
+    #sudoku-grid input.candidate {
+        font-size:8pt;
+    }
+
+    .candidatediv {
+        width: 44px;
+        height: 44px;
+    }
+        .candidatediv td {
+            font-size: 8pt;
+        }
+}
+
+
+@media (min-width:1440px) {
+    #sudoku-grid input {
+        width:48px; height:38px;
+        font-size: 20pt;
+    }
+    #sudoku-grid input.candidate {
+        font-size:8pt;
+    }
+
+    .candidatediv {
+        width: 48px;
+        height: 48px;
+    }
+    .candidatediv td {
+        font-size: 8pt;
+    }
+}
